@@ -1,0 +1,20 @@
+{
+  "name": "blog-express",
+  "version": "0.0.1",
+  "description": "Blog with expressjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-Personal:NgaNguyenDuy/blog-express.git"
+  },
+  "keywords": [
+    "blog",
+    "expressjs",
+    "node.js"
+  ],
+  "author": "NgaNguyenDuy, Thinhit",
+  "license": "MIT"
+}
