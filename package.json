@@ -1,27 +1,28 @@
 {
-  "name": "blog-express",
-  "version": "0.0.1",
-  "description": "Blog with expressjs",
-  "main": "server.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com-Personal:NgaNguyenDuy/blog-express.git"
-  },
-  "keywords": [
-    "blog",
-    "expressjs",
-    "node.js"
-  ],
-  "author": "NgaNguyenDuy, Thinhit",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.9.0",
-    "ejs": "^1.0.0",
-    "express": "^4.9.5",
-    "express-session": "^1.8.2",
-    "mongoose": "^3.8.16"
-  }
+    "name": "blog-express",
+    "version": "0.0.1",
+    "description": "Blog with expressjs",
+    "main": "server.js",
+    "scripts": {
+        "test": "mocha",
+        "start": "node server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com-Personal:NgaNguyenDuy/blog-express.git"
+    },
+    "keywords": [
+        "blog",
+        "expressjs",
+        "node.js"
+    ],
+    "author": "NgaNguyenDuy, Thinhit",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.9.0",
+        "ejs": "^1.0.0",
+        "express": "^4.9.5",
+        "express-session": "^1.8.2",
+        "mongoose": "^3.8.16"
+    }
 }
