@@ -1,0 +1,23 @@
+<% include header %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+          <h1 class="text-center login-title">Register Demo </h1>
+          <div class="account-wall">
+            <img class="profile-img" src="imgs/photo.png"
+                 alt="">
+            <form class="form-signin" method="post" action="http://localhost:8008/register">
+              <input type="text" class="form-control" name="fullname" placeholder="Your name" required autofocus>
+              <input type="text" class="form-control" name="username" placeholder="User" required>
+              <input type="password" class="form-control" name="password" placeholder="Password" required>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Register</button>
+            </form>
+          </div>
+          <span class="text-center new-account">If you realy an accout. Please <a href="/login">login</a>.</span>
+        </div>
+      </div>
+    </div>
+
+<% include footer %>
