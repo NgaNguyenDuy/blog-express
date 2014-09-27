@@ -1,4 +1,4 @@
-blog-express
+## blog-express
 ============
 
 Blog with Expressjs
@@ -7,21 +7,24 @@ Blog with Expressjs
 - Install dependencies: `npm install`
 - And finally, run: `node server.js` and go to browser address: `http://localhost:8008`
 
-Some demo:
+Gallery :
+=======
+
 - index:
-![index](http://localhost:8008/imgs/index.png)
-<!-- ![LoopBack modules](https://github.com/strongloop/loopback/raw/master/docs/assets/lb-modules.png "LoopBack modules") -->
+![index](https://raw.githubusercontent.com/NgaNguyenDuy/blog-express/master/public/imgs/index.png)
+
 
 - Login:
-![Login](http://localhost:8008/imgs/login.png)
+![Login](https://github.com/NgaNguyenDuy/blog-express/blob/master/public/imgs/login.png)
 
 - Login fail:
-![Login](http://localhost:8008/imgs/login-fail.png)
+![Login](https://raw.githubusercontent.com/NgaNguyenDuy/blog-express/master/public/imgs/login-fail.png)
 
 - Register:
-![Login](http://localhost:8008/imgs/regis.png)
+![Login](https://raw.githubusercontent.com/NgaNguyenDuy/blog-express/master/public/imgs/regis.png)
 
 - Login success:
-![Login](http://localhost:8008/imgs/login-success.png)
+![Login](https://raw.githubusercontent.com/NgaNguyenDuy/blog-express/master/public/imgs/login-success.png)
 
-ToDo: Write test with mocha.
+## ToDo:
+Write test with mocha.
