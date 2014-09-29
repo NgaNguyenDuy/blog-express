@@ -1,0 +1,35 @@
+<% include header %>
+
+         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Blog with Express</a>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+        <h1>Post an article</h1>
+        <form action="/posts" method="POST" role="form">
+              <div class="form-group">
+                   <label for="title">Title</label>
+                   <input id="title" class="form-control" name="title" type="text" placeholder="title of your post" />
+              </div>
+              <div class="form-group">
+                   <label for="slug">Slug</label>
+                   <input id="slug" class="form-control" name="slug" type="text" placeholder="slug your post" />
+              </div>
+              <div class="form-group">
+                   <label for="text">Text</label>
+                   <textarea id="text" class="form-control" name="text" row="5" placeholder="Content your post"></textarea>
+              </div>
+              <p><button class="btn btn-primary" type="submit">Save</button></p>
+        </form>
+    </div>
+
+<% include footer %>
