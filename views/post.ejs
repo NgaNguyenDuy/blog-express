@@ -15,11 +15,26 @@
     </div>
     <div class="container">
         <h1>Post an article</h1>
+        <%- message %>
         <form action="/posts" method="POST" role="form">
               <div class="form-group">
                    <label for="title">Title</label>
                    <input id="title" class="form-control" name="title" type="text" placeholder="title of your post" />
               </div>
+              <div class="form-group">
+                   <select name="author">
+                   <% author.forEach(function (authors) {%>
+                   <option><%= authors.username  %></option>
+                   <% }) %>
+                   </select>
+                   
+                   <select name="categories">
+                   <% catname.forEach(function (cat) { %>
+                   <option><%= cat.cat_name %></option>
+                   <% }) %>
+                   </select>
+              </div>
+
               <div class="form-group">
                    <label for="slug">Slug</label>
                    <input id="slug" class="form-control" name="slug" type="text" placeholder="slug your post" />
