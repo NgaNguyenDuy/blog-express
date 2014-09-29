@@ -49,9 +49,11 @@ RouterRoot.post('/register', routes.users.reguser);
 
 RouterRoot.get('/logout', routes.users.logout);
 
+// RouterRoot.get('/admin', )
+RouterRoot.post('/cates', routes.cates.add);
 
-RouterRoot.post('/posts', routes.posts.create);
 RouterRoot.get('/posts', routes.posts.read);
+RouterRoot.post('/posts', routes.posts.create);
 RouterRoot.put('/posts/:post_id', routes.posts.update);
 RouterRoot.delete('/posts/:post_id', routes.posts.del);
 
