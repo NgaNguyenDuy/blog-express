@@ -17,9 +17,6 @@ module.exports = function() {
                 res.json({message: 'Added category successeful!'});
             }
         });
-        // console.log(cat);
-        // console.log(req.body.cate_name);
-        // res.json('add categories');
     };
     
     return {
