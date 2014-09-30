@@ -2,6 +2,7 @@
 
 
 var Post = require('../models/post');
+var Category = require('../models/category');
 
 exports.users = require('./users');
 exports.posts = require('./posts');
@@ -19,11 +20,18 @@ exports.index = function(req, res) {
     
     Post.find(function(err, data) {
         if(err) throw err;
-        // console.log(data);
-        res.render('index', {
-            data: data,
-            user: user
+        
+        Category.find(function(err, cat) {
+            if(err) throw err;
+            
+            res.render('index', {
+                cats: cat,
+                data: data,
+                user: user
+            });
         });
+        
+
     });
     
 

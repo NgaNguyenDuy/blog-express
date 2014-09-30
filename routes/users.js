@@ -4,7 +4,8 @@ var crypto = require('crypto');
 
 module.exports = function() {
     
-    var User = require('../models/user');
+    var User = require('../models/user'),
+        Post = require("../models/post");
 
     // Get method
     var userLogin = function(req, res) {
@@ -14,6 +15,27 @@ module.exports = function() {
     var userLogout = function(req, res) {
         req.session.destroy(function(){
             res.redirect('/');
+        });
+    };
+    
+    
+    var adminArea = function(req, res) {
+        var user = {};
+        if (req.session.user) {
+            res.locals.isLogin = true;
+            user = req.session.user.username;
+        } else {
+            res.locals.isLogin = false;
+        }
+        
+        Post.find(function(err, data) {
+            if(err) throw err;
+
+            res.render('admin', {
+                user: user,
+                data: data,
+                messages: '<p class="alert alert-danger">Access denied. Admin Area.</p>'
+            });
         });
     };
     
@@ -65,6 +87,7 @@ module.exports = function() {
         logout: userLogout,
         authen: authenticate,
         register: register,
-        reguser: reguser
+        reguser: reguser,
+        admin: adminArea
     };
 }();
