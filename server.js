@@ -40,6 +40,8 @@ RouterRoot = express.Router();
 
 
 RouterRoot.get('/', routes.index);
+RouterRoot.get('/posts/edit/:post_id', routes.posts.update);
+
 RouterRoot.get('/login', routes.users.login);
 RouterRoot.post('/login', routes.users.authen);
 
@@ -52,10 +54,21 @@ RouterRoot.get('/logout', routes.users.logout);
 // RouterRoot.get('/admin', )
 RouterRoot.post('/cates', routes.cates.add);
 
+
 RouterRoot.get('/posts', routes.posts.read);
 RouterRoot.post('/posts', routes.posts.create);
-RouterRoot.put('/posts/:post_id', routes.posts.update);
-RouterRoot.delete('/posts/:post_id', routes.posts.del);
+
+RouterRoot.get('/posts/:slug', routes.posts.show);
+
+
+RouterRoot.get('/admin', routes.users.admin);
+
+RouterRoot.post('/update/:id', routes.posts.updatePost);
+
+RouterRoot.post('/delete/:post_id', routes.posts.del);
+
+
+RouterRoot.get('/api/post', routes.posts.api_posts);
 
 RouterRoot.all('*', function(req, res) {
     res.status(404).end();
