@@ -43,7 +43,7 @@
                 <% data.forEach(function(datas) { %>
                 <tr>
                     <td><form method="post" action="/delete/<%= datas._id %>"><button><i class="glyphicon glyphicon-trash"></i></button></form></td>
-                    <td><form method="post" action="/update/<%= datas._id %>"><button><i class="glyphicon glyphicon-edit"></i></button></td>
+                    <td><form method="post" action="/posts/edit/<%= datas._id %>"><button><i class="glyphicon glyphicon-edit"></i></button></form></td>
                     <td><%- datas.title %></td>
                 </tr>
                 <% }) %>
