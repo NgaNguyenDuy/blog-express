@@ -42,6 +42,10 @@ RouterRoot = express.Router();
 RouterRoot.get('/', routes.index);
 RouterRoot.get('/posts/edit/:post_id', routes.posts.update);
 
+RouterRoot.post('/payload', function(req, res) {
+    console.log(req.body);
+});
+
 RouterRoot.get('/login', routes.users.login);
 RouterRoot.post('/login', routes.users.authen);
 
